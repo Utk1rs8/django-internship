@@ -5,6 +5,7 @@ from .models import Bike
 from .serializers import BikesSerializer
 from rest_framework.views import APIView
 from rest_framework.response import Response
+from .forms import *
 from rest_framework import status
 from rest_framework import generics
 
@@ -53,5 +54,20 @@ class BikeDetail(APIView):
 # class BikeDetail(generics.RetrieveUpdateDestroyAPIView):
 #     bike = Bike.objects.all()
 #     serializer = BikesSerializer
-
+def register(request):
+        form = AdminRegistrationsForm()
+        if request.method == 'POST':
+                data = AdminRegistrationsForm(request.POST)
+                if data.is_valid():
+                    name=data.cleaned_data['name']
+                    email=data.cleaned_data['email']
+                    contact=data.cleaned_data['mobile']
+                    password = data.cleaned_data['password']
+                    print(name,email,contact,password)
+                    data.save()
+                    msg="Registration Successfully"
+                    return render(request,'register.html',{'form':form,'msg':msg})
+        else:
+             return render(request,'register.html',{'form':form})
+                
 

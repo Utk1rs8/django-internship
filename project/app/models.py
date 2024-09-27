@@ -13,3 +13,10 @@ class Bike(models.Model):
         power = models.TextField(max_length=150)
         tourque = models.TextField(max_length=150)
     
+
+class Register(models.Model):
+        name = models.CharField(max_length=50)
+        email = models.EmailField()
+        mobile = models.IntegerField()
+        password = models.CharField(max_length=25)
+
