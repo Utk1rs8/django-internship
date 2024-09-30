@@ -1,7 +1,8 @@
-from django.urls import path
+
 from .views import *
-urlpatterns=[
-    path('BikeList/',BikeList.as_view(),name='BikeList'), 
-    path('BikeDetail/<int:pk>', BikeDetail.as_view(),name='BikeDetail'),
-    path('register/',register,name='register')
-]
+from rest_framework.routers import DefaultRouter
+
+router = DefaultRouter()
+router.register(r'', Bikesviewset, basename='Bike')
+router.register(r'', Registerviewset, basename='Client')
+urlpatterns = router.urls
