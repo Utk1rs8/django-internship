@@ -20,3 +20,7 @@ class Register(models.Model):
         mobile = models.IntegerField()
         password = models.CharField(max_length=25)
         confirmpassword = models.CharField(max_length=25)
+
+class ClientLogin(models.Model):
+        name = models.CharField(max_length=50)
+        password = models.CharField(max_length=25)
