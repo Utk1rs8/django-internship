@@ -10,5 +10,5 @@ class Bikesviewset(viewsets.ModelViewSet):
     serializer_class = BikesSerializer
 
 class Registerviewset(viewsets.ModelViewSet):
-    queryset = Bike.objects.all()
+    queryset = Register.objects.all()
     serializer_class = RegisterSerializer
