@@ -24,3 +24,8 @@ class Register(models.Model):
 class ClientLogin(models.Model):
         name = models.CharField(max_length=50)
         password = models.CharField(max_length=25)
+
+class AdminLogin(models.Model):
+        email = models.EmailField()
+        password = models.CharField(max_length=25)
+        

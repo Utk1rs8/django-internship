@@ -12,3 +12,7 @@ class Bikesviewset(viewsets.ModelViewSet):
 class Registerviewset(viewsets.ModelViewSet):
     queryset = Register.objects.all()
     serializer_class = RegisterSerializer
+
+class Loginviewset(viewsets.ModelViewSet):
+    queryset = ClientLogin.objects.all()
+    serializer_class = LoginSerializer
