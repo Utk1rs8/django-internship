@@ -19,4 +19,4 @@ class Loginviewset(viewsets.ModelViewSet):
 
 class Sliderviewset(viewsets.ModelViewSet):
     queryset = Slider.objects.all()
-    serializer_class = SliderSerial
+    serializer_class = SliderSerializer
