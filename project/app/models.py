@@ -34,3 +34,8 @@ class AdminLogin(models.Model):
                 verbose_name_plural='Rideitadmin'
                 # verbose_name='Student'
                 ordering=['email']
+
+class Slider(models.Model):
+        image=models.ImageField(upload_to="image/")
+        name = models.CharField(max_length=50)
+        price = models.IntegerField()

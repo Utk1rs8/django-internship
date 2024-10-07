@@ -16,3 +16,7 @@ class Registerviewset(viewsets.ModelViewSet):
 class Loginviewset(viewsets.ModelViewSet):
     queryset = ClientLogin.objects.all()
     serializer_class = LoginSerializer
+
+class Sliderviewset(viewsets.ModelViewSet):
+    queryset = Slider.objects.all()
+    serializer_class = SliderSerial

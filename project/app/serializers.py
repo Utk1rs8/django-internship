@@ -14,3 +14,8 @@ class LoginSerializer(serializers.ModelSerializer):
     class Meta:
         model = ClientLogin
         fields = '__all__'
+
+class SliderSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Slider
+        fields = '_all_'
