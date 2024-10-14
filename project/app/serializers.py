@@ -5,12 +5,18 @@ class BikesSerializer(serializers.ModelSerializer):
     class Meta:
         model = Bike
         fields = '__all__'
+
 class RegisterSerializer(serializers.ModelSerializer):
     class Meta:
         model = Register
         fields = '__all__'
         
-class LoginSerializer(serializers.ModelSerializer):
+class ClientloginSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ClientLogin
+        fields = '__all__'
+
+class AdminloginSerializer(serializers.ModelSerializer):
     class Meta:
         model = ClientLogin
         fields = '__all__'
