@@ -1,19 +1,5 @@
 from django.db import models
 
-# Create your models here.
-class Bike(models.Model):
-        name = models.CharField(max_length=50)
-        price = models.IntegerField()
-        image=models.ImageField(upload_to="image/")
-        engine_capacity = models.TextField(max_length=150)
-        mileage = models.TextField(max_length=150)
-        transmission = models.TextField(max_length=150)
-        weight = models.TextField(max_length=150)
-        fuel_tank = models.TextField(max_length=150)
-        power = models.TextField(max_length=150)
-        tourque = models.TextField(max_length=150)
-    
-
 class Register(models.Model):
         name = models.CharField(max_length=50)
         email = models.EmailField()
@@ -39,3 +25,26 @@ class Slider(models.Model):
         image=models.ImageField(upload_to="image/")
         name = models.CharField(max_length=50)
         price = models.IntegerField()
+
+class Bikes(models.Model):
+
+        BIKE_TYPE_CHOICES = [
+        ('touring', 'Touring'),
+        ('naked', 'Naked'),
+        ('sports', 'Sports'),
+        ('adventure', 'Adventure'),
+        ('cruiser', 'Cruiser'),
+        ('caferacer', 'Cafe Racer'),
+        ]
+
+        name = models.CharField(max_length=50)
+        biketype=models.CharField(max_length=20, choices=BIKE_TYPE_CHOICES)
+        price = models.IntegerField()
+        image=models.ImageField(upload_to="image/")
+        engine_capacity = models.TextField(max_length=150)
+        mileage = models.TextField(max_length=150)
+        transmission = models.TextField(max_length=150)
+        weight = models.TextField(max_length=150)
+        fuel_tank = models.TextField(max_length=150)
+        power = models.TextField(max_length=150)
+        tourque = models.TextField(max_length=150)

@@ -3,7 +3,7 @@ from rest_framework import serializers
 
 class BikesSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Bike
+        model = Bikes
         fields = '__all__'
 
 class RegisterSerializer(serializers.ModelSerializer):

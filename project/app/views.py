@@ -6,7 +6,7 @@ import io
 
 # Create your views here.
 class Bikesviewset(viewsets.ModelViewSet):
-    queryset = Bike.objects.all()
+    queryset = Bikes.objects.all()
     serializer_class = BikesSerializer
 
 class Registerviewset(viewsets.ModelViewSet):
@@ -16,7 +16,6 @@ class Registerviewset(viewsets.ModelViewSet):
 class Clientloginviewset(viewsets.ModelViewSet):
     queryset = ClientLogin.objects.all()
     serializer_class = ClientloginSerializer
-
 
 class Adminloginviewset(viewsets.ModelViewSet):
     queryset = AdminLogin.objects.all()
