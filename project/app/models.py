@@ -5,7 +5,6 @@ class Register(models.Model):
         email = models.EmailField()
         mobile = models.IntegerField()
         password = models.CharField(max_length=25)
-        confirmpassword = models.CharField(max_length=25)
 
 class ClientLogin(models.Model):
         name = models.CharField(max_length=50)
