@@ -24,3 +24,7 @@ class Adminloginviewset(viewsets.ModelViewSet):
 class Sliderviewset(viewsets.ModelViewSet):
     queryset = Slider.objects.all()
     serializer_class = SliderSerializer
+
+class AccessoriesItemsviewset(viewsets.ModelViewSet):
+    queryset = AccessoriesItems.objects.all()
+    serializer_class = AccessoriesItemsSerializer

@@ -8,6 +8,7 @@ router.register(r'bikes',Bikesviewset)
 router.register(r'register',Registerviewset)
 router.register(r'clientlogin',Clientloginviewset)
 router.register(r'adminlogin',Adminloginviewset)
+router.register(r'accessories',AccessoriesItemsviewset)
 
 urlpatterns = [
     path('', include(router.urls)),

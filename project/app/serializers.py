@@ -25,3 +25,7 @@ class SliderSerializer(serializers.ModelSerializer):
     class Meta:
         model = Slider
         fields = '__all__'
+class AccessoriesItemsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = AccessoriesItems
+        fields = '__all__'

@@ -47,3 +47,9 @@ class Bikes(models.Model):
         fuel_tank = models.TextField(max_length=150)
         power = models.TextField(max_length=150)
         tourque = models.TextField(max_length=150)
+
+class AccessoriesItems(models.Model):
+        name =models.CharField(max_length=50)
+        image=models.ImageField(upload_to="image/")
+        price = models.IntegerField()
+        
