@@ -14,11 +14,11 @@ class AdminLogin(models.Model):
         email = models.EmailField()
         password = models.CharField(max_length=25)
         
-        class Meta:
-                db_table='Rideitadmin'
-                verbose_name_plural='Rideitadmin'
-                # verbose_name='Student'
-                ordering=['email']
+        # class Meta:
+        #         db_table='Rideitadmin'
+        #         verbose_name_plural='Rideitadmin'
+        #         # verbose_name='Student'
+        #         ordering=['email']
 
 class Slider(models.Model):
         image=models.ImageField(upload_to="image/")
